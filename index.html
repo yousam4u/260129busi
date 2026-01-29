@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI 수익화 전략 | 미래를 설계하다</title>
+    <title>AI 밀키스 전략 | 미래를 설계하다</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Noto+Sans+KR:wght@300;400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Righteous&family=Noto+Sans+KR:wght@300;400;700;900&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
-            --primary-dark: #0a0e27;
-            --secondary-dark: #151b3d;
-            --accent-cyan: #00f3ff;
-            --accent-pink: #ff006e;
-            --accent-yellow: #ffbe0b;
-            --text-primary: #e8f1f5;
-            --text-secondary: #a0aec0;
-            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --primary-light: #ffffff;
+            --secondary-light: #f8fbff;
+            --accent-blue: #0066ff;
+            --accent-blue-light: #4d94ff;
+            --accent-blue-dark: #0052cc;
+            --accent-sky: #00b4d8;
+            --text-primary: #1a1a1a;
+            --text-secondary: #4a5568;
+            --gradient-1: linear-gradient(135deg, #0066ff 0%, #00b4d8 100%);
+            --gradient-2: linear-gradient(135deg, #4d94ff 0%, #00d4ff 100%);
+            --gradient-3: linear-gradient(135deg, #0052cc 0%, #0066ff 100%);
+            --shadow-sm: 0 2px 8px rgba(0, 102, 255, 0.1);
+            --shadow-md: 0 4px 16px rgba(0, 102, 255, 0.15);
+            --shadow-lg: 0 8px 32px rgba(0, 102, 255, 0.2);
         }
 
         * {
@@ -29,7 +36,7 @@
 
         body {
             font-family: 'Noto Sans KR', sans-serif;
-            background: var(--primary-dark);
+            background: var(--primary-light);
             color: var(--text-primary);
             overflow-x: hidden;
             line-height: 1.6;
@@ -51,16 +58,23 @@
             position: absolute;
             width: 200%;
             height: 200%;
-            background: 
-                radial-gradient(circle at 20% 50%, rgba(0, 243, 255, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(255, 0, 110, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 40% 20%, rgba(255, 190, 11, 0.05) 0%, transparent 50%);
+            background:
+                radial-gradient(circle at 20% 50%, rgba(0, 102, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(0, 180, 216, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(77, 148, 255, 0.05) 0%, transparent 50%);
             animation: backgroundMove 20s ease-in-out infinite;
         }
 
         @keyframes backgroundMove {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            50% { transform: translate(-50px, 50px) rotate(5deg); }
+
+            0%,
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            50% {
+                transform: translate(-50px, 50px) rotate(5deg);
+            }
         }
 
         /* Grid Pattern Overlay */
@@ -70,9 +84,9 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: 
-                linear-gradient(rgba(0, 243, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 243, 255, 0.03) 1px, transparent 1px);
+            background-image:
+                linear-gradient(rgba(0, 102, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 102, 255, 0.05) 1px, transparent 1px);
             background-size: 50px 50px;
             z-index: -1;
             pointer-events: none;
@@ -96,7 +110,7 @@
         .logo {
             font-family: 'Righteous', cursive;
             font-size: 1.8rem;
-            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+            background: var(--gradient-1);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -105,8 +119,15 @@
         }
 
         @keyframes logoGlow {
-            0%, 100% { filter: drop-shadow(0 0 10px rgba(0, 243, 255, 0.3)); }
-            50% { filter: drop-shadow(0 0 20px rgba(255, 0, 110, 0.5)); }
+
+            0%,
+            100% {
+                filter: drop-shadow(0 0 10px rgba(0, 102, 255, 0.4));
+            }
+
+            50% {
+                filter: drop-shadow(0 0 20px rgba(0, 180, 216, 0.6));
+            }
         }
 
         nav ul {
@@ -131,12 +152,12 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--accent-cyan);
+            background: var(--accent-blue);
             transition: width 0.3s ease;
         }
 
         nav a:hover {
-            color: var(--accent-cyan);
+            color: var(--accent-blue);
         }
 
         nav a:hover::after {
@@ -163,7 +184,7 @@
             font-weight: 900;
             line-height: 1.1;
             margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, #ffffff 0%, var(--accent-cyan) 50%, var(--accent-pink) 100%);
+            background: var(--gradient-1);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -175,6 +196,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -192,7 +214,7 @@
         .cta-button {
             display: inline-block;
             padding: 1.2rem 3rem;
-            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+            background: var(--gradient-1);
             color: white;
             text-decoration: none;
             border-radius: 50px;
@@ -202,6 +224,7 @@
             position: relative;
             overflow: hidden;
             animation: fadeInUp 1s ease-out 0.4s both;
+            box-shadow: var(--shadow-md);
         }
 
         .cta-button::before {
@@ -211,7 +234,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, var(--accent-pink), var(--accent-yellow));
+            background: var(--gradient-3);
             transition: left 0.3s ease;
             z-index: -1;
         }
@@ -222,7 +245,7 @@
 
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0, 243, 255, 0.4);
+            box-shadow: var(--shadow-lg);
         }
 
         .hero-visual {
@@ -233,12 +256,12 @@
 
         .floating-card {
             position: absolute;
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(0, 102, 255, 0.2);
             border-radius: 20px;
             padding: 1.5rem;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            box-shadow: var(--shadow-md);
             animation: float 6s ease-in-out infinite;
         }
 
@@ -261,13 +284,20 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
         }
 
         .floating-card h3 {
             font-size: 1.1rem;
-            color: var(--accent-cyan);
+            color: var(--accent-blue);
             margin-bottom: 0.5rem;
             font-family: 'JetBrains Mono', monospace;
         }
@@ -280,7 +310,7 @@
         /* Monetization Methods Section */
         .methods-section {
             padding: 6rem 5%;
-            background: rgba(21, 27, 61, 0.5);
+            background: var(--secondary-light);
             position: relative;
         }
 
@@ -299,7 +329,7 @@
             font-size: 3.5rem;
             font-weight: 900;
             margin-bottom: 1rem;
-            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+            background: var(--gradient-1);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -322,14 +352,15 @@
         }
 
         .method-card {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: white;
+            border: 1px solid rgba(0, 102, 255, 0.15);
             border-radius: 25px;
             padding: 2.5rem;
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
             cursor: pointer;
+            box-shadow: var(--shadow-sm);
         }
 
         .method-card::before {
@@ -339,7 +370,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(0, 243, 255, 0.1), rgba(255, 0, 110, 0.1));
+            background: linear-gradient(135deg, rgba(0, 102, 255, 0.05), rgba(0, 180, 216, 0.05));
             opacity: 0;
             transition: opacity 0.4s ease;
             z-index: 0;
@@ -351,11 +382,11 @@
 
         .method-card:hover {
             transform: translateY(-10px);
-            border-color: var(--accent-cyan);
-            box-shadow: 0 20px 60px rgba(0, 243, 255, 0.2);
+            border-color: var(--accent-blue);
+            box-shadow: var(--shadow-lg);
         }
 
-        .method-card > * {
+        .method-card>* {
             position: relative;
             z-index: 1;
         }
@@ -368,8 +399,15 @@
         }
 
         @keyframes iconPulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
         }
 
         .method-card h3 {
@@ -389,11 +427,11 @@
         .method-tag {
             display: inline-block;
             padding: 0.5rem 1rem;
-            background: rgba(0, 243, 255, 0.1);
-            border: 1px solid var(--accent-cyan);
+            background: rgba(0, 102, 255, 0.1);
+            border: 1px solid var(--accent-blue);
             border-radius: 20px;
             font-size: 0.85rem;
-            color: var(--accent-cyan);
+            color: var(--accent-blue);
             margin-right: 0.5rem;
             margin-top: 0.5rem;
             font-family: 'JetBrains Mono', monospace;
@@ -416,21 +454,23 @@
         .stat-item {
             text-align: center;
             padding: 2rem;
-            background: rgba(255, 255, 255, 0.02);
+            background: white;
             border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 102, 255, 0.15);
             transition: all 0.3s ease;
+            box-shadow: var(--shadow-sm);
         }
 
         .stat-item:hover {
-            background: rgba(255, 255, 255, 0.05);
-            transform: translateY(-5px);
+            background: var(--secondary-light);
+            box-shadow: var(--shadow-md);
+
         }
 
         .stat-number {
             font-size: 4rem;
             font-weight: 900;
-            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+            background: var(--gradient-1);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -448,7 +488,7 @@
         .cta-section {
             padding: 8rem 5%;
             text-align: center;
-            background: linear-gradient(135deg, rgba(0, 243, 255, 0.05), rgba(255, 0, 110, 0.05));
+            background: linear-gradient(135deg, rgba(0, 102, 255, 0.05), rgba(0, 180, 216, 0.05));
             position: relative;
         }
 
@@ -459,7 +499,7 @@
             width: 100%;
             height: 2px;
             left: 0;
-            background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent);
+            background: linear-gradient(90deg, transparent, var(--accent-blue), transparent);
         }
 
         .cta-section::before {
@@ -488,9 +528,9 @@
         /* Footer */
         footer {
             padding: 3rem 5%;
-            background: var(--secondary-dark);
+            background: var(--secondary-light);
             text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(0, 102, 255, 0.15);
         }
 
         footer p {
@@ -564,6 +604,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="background-animation"></div>
     <div class="grid-overlay"></div>
@@ -573,7 +614,7 @@
             <div class="logo">AI.PROFIT</div>
             <nav>
                 <ul>
-                    <li><a href="#methods">수익화 방법</a></li>
+                    <li><a href="#methods">밀키스 방법</a></li>
                     <li><a href="#stats">시장 현황</a></li>
                     <li><a href="#start">시작하기</a></li>
                 </ul>
@@ -584,9 +625,9 @@
     <section class="hero">
         <div class="hero-content">
             <div class="hero-text">
-                <h1>AI로 시작하는<br>새로운 수익화</h1>
+                <h1>AI로 시작하는<br>새로운 밀키스</h1>
                 <p class="subtitle">인공지능 기술을 활용해 지속 가능한 비즈니스를 구축하세요. 지금이 바로 AI 시대의 선두주자가 될 기회입니다.</p>
-                <a href="#methods" class="cta-button">수익화 전략 탐색하기</a>
+                <a href="#methods" class="cta-button">밀키스 전략 탐색하기</a>
             </div>
             <div class="hero-visual">
                 <div class="floating-card">
@@ -606,9 +647,9 @@
     </section>
 
     <section id="methods" class="methods-section">
-        <h2 class="section-title">AI 수익화 전략</h2>
+        <h2 class="section-title">AI 밀키스 전략</h2>
         <p class="section-subtitle">검증된 AI 비즈니스 모델로 당신의 성공을 설계하세요</p>
-        
+
         <div class="methods-grid">
             <div class="method-card reveal">
                 <div class="method-icon">🤖</div>
@@ -689,19 +730,444 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 AI.PROFIT. 모든 권리 보유. | AI로 시작하는 새로운 비즈니스 혁신</p>
+        <div style="max-width: 1400px; margin: 0 auto; padding: 4rem 0;">
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
+                <!-- 회사 소개 -->
+                <div>
+                    <h3 style="color: var(--accent-blue); font-size: 1.3rem; margin-bottom: 1rem; font-weight: 700;">
+                        피닉스에이아이</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1rem;">
+                        '누구나 손쉽게 AI를 쓰는 세상'을 만드는 인공지능 기술 전문 기업입니다.
+                    </p>
+                    <p style="color: var(--text-secondary); line-height: 1.8; font-size: 0.9rem;">
+                        AI가 특정 기업이나 전문가에 국한되지 않고 보편적으로 활용될 수 있도록 기술 대중화에 집중하고 있습니다.
+                    </p>
+                </div>
+
+                <!-- 주요 서비스 -->
+                <div>
+                    <h3 style="color: var(--accent-blue); font-size: 1.3rem; margin-bottom: 1rem; font-weight: 700;">주요
+                        서비스</h3>
+                    <ul style="list-style: none; color: var(--text-secondary); line-height: 2;">
+                        <li style="margin-bottom: 0.5rem;">🤖 Phoenix Agent Universe</li>
+                        <li style="margin-bottom: 0.5rem;">🌐 Phoenix Portal</li>
+                        <li style="margin-bottom: 0.5rem;">💬 맞춤형 AI 챗봇</li>
+                        <li style="margin-bottom: 0.5rem;">🔍 RAG 기반 검색 시스템</li>
+                        <li style="margin-bottom: 0.5rem;">📊 데이터 분석 및 시각화</li>
+                    </ul>
+                </div>
+
+                <!-- 연락처 -->
+                <div>
+                    <h3 style="color: var(--accent-blue); font-size: 1.3rem; margin-bottom: 1rem; font-weight: 700;">연락처
+                    </h3>
+                    <div style="color: var(--text-secondary); line-height: 2;">
+                        <p style="margin-bottom: 0.5rem;">📍 경기도 남양주시 다산지금로 202<br>&nbsp;&nbsp;&nbsp;&nbsp;비동 4층
+                            비에프04-0097호</p>
+                        <p style="margin-bottom: 0.5rem;">📧 phoenixai.sw@gmail.com</p>
+                        <p style="margin-bottom: 0.5rem;">📞 070-8064-6118</p>
+                        <p style="margin-bottom: 0.5rem; font-size: 0.85rem;">⏰ 주중 10시 ~ 18시 (점심 12시 ~ 13시)</p>
+                    </div>
+                </div>
+
+                <!-- 회사 정보 -->
+                <div>
+                    <h3 style="color: var(--accent-blue); font-size: 1.3rem; margin-bottom: 1rem; font-weight: 700;">회사
+                        정보</h3>
+                    <div style="color: var(--text-secondary); line-height: 2;">
+                        <p style="margin-bottom: 0.5rem;">대표이사: 신용천</p>
+                        <p style="margin-bottom: 0.5rem;">설립연도: 2015년</p>
+                        <p style="margin-bottom: 0.5rem;">사업자번호: 551-88-00087</p>
+                        <p style="margin-bottom: 1rem;">AI 연구개발 경력: 11년+</p>
+                        <div style="margin-top: 1rem;">
+                            <span
+                                style="display: inline-block; padding: 0.4rem 0.8rem; background: rgba(0, 102, 255, 0.1); border: 1px solid var(--accent-blue); border-radius: 15px; font-size: 0.8rem; margin-right: 0.5rem; margin-bottom: 0.5rem;">MCP
+                                기술</span>
+                            <span
+                                style="display: inline-block; padding: 0.4rem 0.8rem; background: rgba(0, 102, 255, 0.1); border: 1px solid var(--accent-blue); border-radius: 15px; font-size: 0.8rem; margin-right: 0.5rem; margin-bottom: 0.5rem;">AI
+                                Agent</span>
+                            <span
+                                style="display: inline-block; padding: 0.4rem 0.8rem; background: rgba(0, 102, 255, 0.1); border: 1px solid var(--accent-blue); border-radius: 15px; font-size: 0.8rem; margin-bottom: 0.5rem;">노코드
+                                플랫폼</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 하단 저작권 -->
+            <div style="border-top: 1px solid rgba(0, 102, 255, 0.15); padding-top: 2rem; text-align: center;">
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">
+                    &copy; 2025 Phoenix AI Co., Ltd. All rights reserved.
+                </p>
+                <p style="color: var(--text-secondary); font-size: 0.85rem;">
+                    누구나 손쉽게 AI를 쓰는 세상을 만듭니다
+                </p>
+            </div>
+
+            <!-- 관리자 모드 버튼 -->
+            <div style="margin-top: 2rem; text-align: center;">
+                <button id="adminModeBtn"
+                    style="padding: 0.8rem 2rem; background: var(--gradient-1); color: white; border: none; border-radius: 25px; font-size: 0.9rem; cursor: pointer; font-weight: 600; box-shadow: var(--shadow-sm); transition: all 0.3s ease;">
+                    🔐 관리자 모드
+                </button>
+            </div>
+        </div>
     </footer>
 
+    <!-- 로그인 모달 -->
+    <div id="loginModal"
+        style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); z-index: 10000; align-items: center; justify-content: center;">
+        <div
+            style="background: white; padding: 3rem; border-radius: 20px; box-shadow: var(--shadow-lg); max-width: 400px; width: 90%;">
+            <h2 style="color: var(--accent-blue); margin-bottom: 2rem; text-align: center;">관리자 로그인</h2>
+            <form id="loginForm" autocomplete="on">
+                <div style="margin-bottom: 1.5rem;">
+                    <label
+                        style="display: block; margin-bottom: 0.5rem; color: var(--text-primary); font-weight: 600;">아이디</label>
+                    <input type="text" id="adminUsername" name="username" autocomplete="username"
+                        style="width: 100%; padding: 0.8rem; border: 1px solid rgba(0, 102, 255, 0.2); border-radius: 10px; font-size: 1rem; outline: none; transition: border 0.3s ease;">
+                </div>
+                <div style="margin-bottom: 2rem;">
+                    <label
+                        style="display: block; margin-bottom: 0.5rem; color: var(--text-primary); font-weight: 600;">비밀번호</label>
+                    <input type="password" id="adminPassword" name="password" autocomplete="current-password"
+                        style="width: 100%; padding: 0.8rem; border: 1px solid rgba(0, 102, 255, 0.2); border-radius: 10px; font-size: 1rem; outline: none; transition: border 0.3s ease;">
+                </div>
+                <div style="display: flex; gap: 1rem;">
+                    <button type="submit"
+                        style="flex: 1; padding: 0.8rem; background: var(--gradient-1); color: white; border: none; border-radius: 10px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">
+                        로그인
+                    </button>
+                    <button type="button" id="cancelLoginBtn"
+                        style="flex: 1; padding: 0.8rem; background: #e0e0e0; color: var(--text-primary); border: none; border-radius: 10px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">
+                        취소
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 관리자 패널 -->
+    <div id="adminPanel"
+        style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); z-index: 10000; overflow-y: auto;">
+        <div
+            style="background: white; margin: 2rem auto; max-width: 1000px; border-radius: 20px; box-shadow: var(--shadow-lg); min-height: calc(100vh - 4rem);">
+            <!-- 관리자 패널 헤더 -->
+            <div
+                style="background: var(--gradient-1); color: white; padding: 1.5rem 2rem; border-radius: 20px 20px 0 0; display: flex; justify-content: space-between; align-items: center;">
+                <h2 style="margin: 0;">⚙️ 관리자 패널</h2>
+                <button id="closeAdminBtn"
+                    style="background: rgba(255, 255, 255, 0.2); color: white; border: none; padding: 0.5rem 1rem; border-radius: 10px; cursor: pointer; font-weight: 600;">
+                    닫기
+                </button>
+            </div>
+
+            <!-- 탭 메뉴 -->
+            <div style="display: flex; border-bottom: 2px solid #f0f0f0; padding: 0 2rem;">
+                <button class="admin-tab active" data-tab="footer"
+                    style="padding: 1rem 2rem; background: none; border: none; border-bottom: 3px solid var(--accent-blue); color: var(--accent-blue); font-weight: 600; cursor: pointer; transition: all 0.3s ease;">
+                    푸터 편집
+                </button>
+                <button class="admin-tab" data-tab="header"
+                    style="padding: 1rem 2rem; background: none; border: none; border-bottom: 3px solid transparent; color: var(--text-secondary); font-weight: 600; cursor: pointer; transition: all 0.3s ease;">
+                    헤더 편집
+                </button>
+            </div>
+
+            <!-- 푸터 편집 탭 -->
+            <div id="footerTab" class="admin-tab-content" style="padding: 2rem;">
+                <h3 style="color: var(--accent-blue); margin-bottom: 1.5rem;">푸터 정보 수정</h3>
+
+                <div style="display: grid; gap: 1.5rem;">
+                    <div>
+                        <label
+                            style="display: block; margin-bottom: 0.5rem; color: var(--text-primary); font-weight: 600;">회사명</label>
+                        <input type="text" id="companyName"
+                            style="width: 100%; padding: 0.8rem; border: 1px solid rgba(0, 102, 255, 0.2); border-radius: 10px; font-size: 1rem;">
+                    </div>
+
+                    <div>
+                        <label
+                            style="display: block; margin-bottom: 0.5rem; color: var(--text-primary); font-weight: 600;">회사
+                            소개</label>
+                        <textarea id="companyDesc" rows="3"
+                            style="width: 100%; padding: 0.8rem; border: 1px solid rgba(0, 102, 255, 0.2); border-radius: 10px; font-size: 1rem; resize: vertical;"></textarea>
+                    </div>
+
+                    <div>
+                        <label
+                            style="display: block; margin-bottom: 0.5rem; color: var(--text-primary); font-weight: 600;">주소</label>
+                        <input type="text" id="companyAddress"
+                            style="width: 100%; padding: 0.8rem; border: 1px solid rgba(0, 102, 255, 0.2); border-radius: 10px; font-size: 1rem;">
+                    </div>
+
+                    <div>
+                        <label
+                            style="display: block; margin-bottom: 0.5rem; color: var(--text-primary); font-weight: 600;">이메일</label>
+                        <input type="email" id="companyEmail"
+                            style="width: 100%; padding: 0.8rem; border: 1px solid rgba(0, 102, 255, 0.2); border-radius: 10px; font-size: 1rem;">
+                    </div>
+
+                    <div>
+                        <label
+                            style="display: block; margin-bottom: 0.5rem; color: var(--text-primary); font-weight: 600;">전화번호</label>
+                        <input type="tel" id="companyPhone"
+                            style="width: 100%; padding: 0.8rem; border: 1px solid rgba(0, 102, 255, 0.2); border-radius: 10px; font-size: 1rem;">
+                    </div>
+
+                    <div>
+                        <label
+                            style="display: block; margin-bottom: 0.5rem; color: var(--text-primary); font-weight: 600;">대표이사</label>
+                        <input type="text" id="companyCEO"
+                            style="width: 100%; padding: 0.8rem; border: 1px solid rgba(0, 102, 255, 0.2); border-radius: 10px; font-size: 1rem;">
+                    </div>
+
+                    <div>
+                        <label
+                            style="display: block; margin-bottom: 0.5rem; color: var(--text-primary); font-weight: 600;">사업자번호</label>
+                        <input type="text" id="companyRegNum"
+                            style="width: 100%; padding: 0.8rem; border: 1px solid rgba(0, 102, 255, 0.2); border-radius: 10px; font-size: 1rem;">
+                    </div>
+
+                    <button id="saveFooterBtn"
+                        style="padding: 1rem; background: var(--gradient-1); color: white; border: none; border-radius: 10px; font-size: 1rem; font-weight: 600; cursor: pointer; margin-top: 1rem;">
+                        💾 푸터 저장
+                    </button>
+                </div>
+            </div>
+
+            <!-- 헤더 편집 탭 -->
+            <div id="headerTab" class="admin-tab-content" style="display: none; padding: 2rem;">
+                <h3 style="color: var(--accent-blue); margin-bottom: 1.5rem;">헤더 정보 수정</h3>
+
+                <div style="display: grid; gap: 1.5rem;">
+                    <div>
+                        <label
+                            style="display: block; margin-bottom: 0.5rem; color: var(--text-primary); font-weight: 600;">로고
+                            텍스트</label>
+                        <input type="text" id="logoText"
+                            style="width: 100%; padding: 0.8rem; border: 1px solid rgba(0, 102, 255, 0.2); border-radius: 10px; font-size: 1rem;">
+                    </div>
+
+                    <div>
+                        <label
+                            style="display: block; margin-bottom: 0.5rem; color: var(--text-primary); font-weight: 600;">메인
+                            타이틀</label>
+                        <input type="text" id="mainTitle"
+                            style="width: 100%; padding: 0.8rem; border: 1px solid rgba(0, 102, 255, 0.2); border-radius: 10px; font-size: 1rem;">
+                    </div>
+
+                    <div>
+                        <label
+                            style="display: block; margin-bottom: 0.5rem; color: var(--text-primary); font-weight: 600;">서브타이틀</label>
+                        <textarea id="subTitle" rows="3"
+                            style="width: 100%; padding: 0.8rem; border: 1px solid rgba(0, 102, 255, 0.2); border-radius: 10px; font-size: 1rem; resize: vertical;"></textarea>
+                    </div>
+
+                    <button id="saveHeaderBtn"
+                        style="padding: 1rem; background: var(--gradient-1); color: white; border: none; border-radius: 10px; font-size: 1rem; font-weight: 600; cursor: pointer; margin-top: 1rem;">
+                        💾 헤더 저장
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
+        // 관리자 모드 관련 변수
+        const ADMIN_CREDENTIALS = { username: '260129', password: '260129' };
+
+        // 로컬 스토리지에서 데이터 로드
+        function loadFooterData() {
+            const data = localStorage.getItem('footerData');
+            return data ? JSON.parse(data) : {
+                companyName: '피닉스에이아이',
+                companyDesc: '\'누구나 손쉽게 AI를 쓰는 세상\'을 만드는 인공지능 기술 전문 기업입니다.\nAI가 특정 기업이나 전문가에 국한되지 않고 보편적으로 활용될 수 있도록 기술 대중화에 집중하고 있습니다.',
+                companyAddress: '경기도 남양주시 다산지금로 202    비동 4층 비에프04-0097호',
+                companyEmail: 'phoenixai.sw@gmail.com',
+                companyPhone: '070-8064-6118',
+                companyCEO: '신용천',
+                companyRegNum: '551-88-00087'
+            };
+        }
+
+        function loadHeaderData() {
+            const data = localStorage.getItem('headerData');
+            return data ? JSON.parse(data) : {
+                logoText: 'AI.PROFIT',
+                mainTitle: 'AI로 시작하는<br>새로운 밀키스',
+                subTitle: '인공지능 기술을 활용해 지속 가능한 비즈니스를 구축하세요. 지금이 바로 AI 시대의 선두주자가 될 기회입니다.'
+            };
+        }
+
+        // 관리자 모드 버튼 클릭
+        document.getElementById('adminModeBtn').addEventListener('click', function () {
+            document.getElementById('loginModal').style.display = 'flex';
+        });
+
+        // 로그인 취소
+        document.getElementById('cancelLoginBtn').addEventListener('click', function () {
+            document.getElementById('loginModal').style.display = 'none';
+            document.getElementById('loginForm').reset();
+        });
+
+        // 로그인 처리
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const username = document.getElementById('adminUsername').value;
+            const password = document.getElementById('adminPassword').value;
+
+            if (username === ADMIN_CREDENTIALS.username && password === ADMIN_CREDENTIALS.password) {
+                document.getElementById('loginModal').style.display = 'none';
+                document.getElementById('adminPanel').style.display = 'block';
+                loadAdminData();
+                document.getElementById('loginForm').reset();
+            } else {
+                alert('아이디 또는 비밀번호가 올바르지 않습니다.');
+            }
+        });
+
+        // 관리자 패널 닫기
+        document.getElementById('closeAdminBtn').addEventListener('click', function () {
+            document.getElementById('adminPanel').style.display = 'none';
+        });
+
+        // 탭 전환
+        document.querySelectorAll('.admin-tab').forEach(tab => {
+            tab.addEventListener('click', function () {
+                const tabName = this.getAttribute('data-tab');
+
+                // 모든 탭 비활성화
+                document.querySelectorAll('.admin-tab').forEach(t => {
+                    t.style.borderBottom = '3px solid transparent';
+                    t.style.color = 'var(--text-secondary)';
+                    t.classList.remove('active');
+                });
+
+                // 현재 탭 활성화
+                this.style.borderBottom = '3px solid var(--accent-blue)';
+                this.style.color = 'var(--accent-blue)';
+                this.classList.add('active');
+
+                // 탭 컨텐츠 전환
+                document.querySelectorAll('.admin-tab-content').forEach(content => {
+                    content.style.display = 'none';
+                });
+                document.getElementById(tabName + 'Tab').style.display = 'block';
+            });
+        });
+
+        // 관리자 데이터 로드
+        function loadAdminData() {
+            const footerData = loadFooterData();
+            document.getElementById('companyName').value = footerData.companyName;
+            document.getElementById('companyDesc').value = footerData.companyDesc;
+            document.getElementById('companyAddress').value = footerData.companyAddress;
+            document.getElementById('companyEmail').value = footerData.companyEmail;
+            document.getElementById('companyPhone').value = footerData.companyPhone;
+            document.getElementById('companyCEO').value = footerData.companyCEO;
+            document.getElementById('companyRegNum').value = footerData.companyRegNum;
+
+            const headerData = loadHeaderData();
+            document.getElementById('logoText').value = headerData.logoText;
+            document.getElementById('mainTitle').value = headerData.mainTitle.replace('<br>', '\n');
+            document.getElementById('subTitle').value = headerData.subTitle;
+        }
+
+        // 푸터 저장
+        document.getElementById('saveFooterBtn').addEventListener('click', function () {
+            const footerData = {
+                companyName: document.getElementById('companyName').value,
+                companyDesc: document.getElementById('companyDesc').value,
+                companyAddress: document.getElementById('companyAddress').value,
+                companyEmail: document.getElementById('companyEmail').value,
+                companyPhone: document.getElementById('companyPhone').value,
+                companyCEO: document.getElementById('companyCEO').value,
+                companyRegNum: document.getElementById('companyRegNum').value
+            };
+
+            localStorage.setItem('footerData', JSON.stringify(footerData));
+            updateFooter(footerData);
+            alert('푸터 정보가 저장되었습니다!');
+        });
+
+        // 헤더 저장
+        document.getElementById('saveHeaderBtn').addEventListener('click', function () {
+            const headerData = {
+                logoText: document.getElementById('logoText').value,
+                mainTitle: document.getElementById('mainTitle').value.replace('\n', '<br>'),
+                subTitle: document.getElementById('subTitle').value
+            };
+
+            localStorage.setItem('headerData', JSON.stringify(headerData));
+            updateHeader(headerData);
+            alert('헤더 정보가 저장되었습니다!');
+        });
+
+        // 푸터 업데이트
+        function updateFooter(data) {
+            const footer = document.querySelector('footer');
+            const companyNameEl = footer.querySelector('h3');
+            if (companyNameEl) companyNameEl.textContent = data.companyName;
+
+            const descParagraphs = footer.querySelectorAll('p');
+            if (descParagraphs[0]) {
+                const lines = data.companyDesc.split('\n');
+                descParagraphs[0].innerHTML = lines[0];
+                if (descParagraphs[1] && lines[1]) {
+                    descParagraphs[1].innerHTML = lines[1];
+                }
+            }
+
+            // 연락처 정보 업데이트
+            const contactDiv = footer.querySelectorAll('div')[4];
+            if (contactDiv) {
+                const contactPs = contactDiv.querySelectorAll('p');
+                if (contactPs[0]) contactPs[0].innerHTML = '📍 ' + data.companyAddress;
+                if (contactPs[1]) contactPs[1].innerHTML = '📧 ' + data.companyEmail;
+                if (contactPs[2]) contactPs[2].innerHTML = '📞 ' + data.companyPhone;
+            }
+
+            // 회사 정보 업데이트
+            const infoDiv = footer.querySelectorAll('div')[6];
+            if (infoDiv) {
+                const infoPs = infoDiv.querySelectorAll('p');
+                if (infoPs[0]) infoPs[0].innerHTML = '대표이사: ' + data.companyCEO;
+                if (infoPs[2]) infoPs[2].innerHTML = '사업자번호: ' + data.companyRegNum;
+            }
+        }
+
+        // 헤더 업데이트
+        function updateHeader(data) {
+            const logo = document.querySelector('.logo');
+            if (logo) logo.textContent = data.logoText;
+
+            const mainTitle = document.querySelector('.hero-text h1');
+            if (mainTitle) mainTitle.innerHTML = data.mainTitle;
+
+            const subTitle = document.querySelector('.hero-text .subtitle');
+            if (subTitle) subTitle.textContent = data.subTitle;
+        }
+
+        // 페이지 로드 시 저장된 데이터 적용
+        window.addEventListener('DOMContentLoaded', function () {
+            const footerData = loadFooterData();
+            const headerData = loadHeaderData();
+            updateFooter(footerData);
+            updateHeader(headerData);
+        });
+
+
         // Scroll Reveal Animation
         function reveal() {
             const reveals = document.querySelectorAll('.reveal');
-            
+
             reveals.forEach(element => {
                 const windowHeight = window.innerHeight;
                 const elementTop = element.getBoundingClientRect().top;
                 const elementVisible = 150;
-                
+
                 if (elementTop < windowHeight - elementVisible) {
                     element.classList.add('active');
                 }
@@ -730,7 +1196,7 @@
             let start = 0;
             const increment = target / (duration / 16);
             const isNumber = !target.toString().includes('$') && !target.toString().includes('%') && !target.toString().includes('+') && !target.toString().includes('K');
-            
+
             const timer = setInterval(() => {
                 start += increment;
                 if (start >= parseFloat(target)) {
@@ -751,11 +1217,11 @@
         function checkStatsSection() {
             const statsSection = document.querySelector('.stats-section');
             const statNumbers = document.querySelectorAll('.stat-number');
-            
+
             if (statsSection) {
                 const rect = statsSection.getBoundingClientRect();
                 const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
-                
+
                 if (isVisible && !statsAnimated) {
                     statsAnimated = true;
                     statNumbers.forEach((stat, index) => {
@@ -790,4 +1256,5 @@
         checkStatsSection();
     </script>
 </body>
+
 </html>
